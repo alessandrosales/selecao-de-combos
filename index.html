@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Seleção de Combos</title>
+	<script src="jquery-2.1.3.min.js"></script>
+	<script src="dados.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<h1>Selecione as opções para testar em clique em enviar</h1>
+	<form action="javascript:enviar()" name="form-categorias">
+		<label>
+			<b>Categoria: </b>
+			<select name="categoria" onchange="filtroSubcategorias1(this)">
+				
+			</select>
+		</label><br>
+		<label>
+			<b>Subcategoria 1: </b>
+			<select name="subcategoria1" onchange="filtroSubcategorias2(this)">
+				
+			</select>
+		</label><br>
+		<label>
+			<b>Subcategoria 2: </b>
+			<select name="subcategoria2" onchange="filtroSubcategorias3(this)">
+				
+			</select>
+		</label><br>
+		<label>
+			<b>Subcategoria 3: </b>
+			<select name="subcategoria3">
+				
+			</select>
+		</label><br>
+		<input type="submit">
+	</form>
+	<button onclick="reset()">Reset</button>
+	<div>
+		<h2>Lista de Resultados (Propriedade 'value' das options)</h2>
+		<ul id="resultados">
+			<li>
+				<b>Categoria: </b><i id="cat"></i>
+			</li>
+			<li>
+				<b>Sub Categoria 1: </b><i id="scat1"></i>
+			</li>
+			<li>
+				<b>Sub Categoria 2: </b><i id="scat2"></i>
+			</li>
+			<li>
+				<b>Sub Categoria 3: </b><i id="scat3"></i>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
